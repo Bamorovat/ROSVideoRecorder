@@ -15,17 +15,24 @@ This ROS package provides a tool to record video streams from specified ROS topi
 - OpenCV
 - cv_bridge
 
-## Installation
-1. Navigate to your catkin workspace's source directory (e.g., `~/catkin_ws/src`).
-2. Clone this repository into the source directory.
-3. Navigate back to your catkin workspace and build the package:
+### Downloading and Building the Package
+1. **Clone the Repository:**
+   First, navigate to your catkin workspace's `src` directory:
+   ```bash
+   cd ~/catkin_ws/src
+   ```
+   Then, clone the repository:
+   ```bash
+   git clone https://github.com/your-username/ros_video_recorder.git
+    ```
+2. Navigate back to your catkin workspace and build the package:
 
     ```bash
     cd ~/catkin_ws
     catkin_make
     ```
    
-4. Source the workspace to include the new package environment:
+3Source the workspace to include the new package environment:
     
         ```bash
         source ~/catkin_ws/devel/setup.bash

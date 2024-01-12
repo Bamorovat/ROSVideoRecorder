@@ -1,11 +1,5 @@
 # ROS Video Recorder
 
-## Author
-Mohammad Hossein Bamorovat Abadi
-
-## Date
-2024-01-11
-
 ## Overview
 This ROS package provides functionality for recording video streams from various ROS topics into video files. The `VideoRecorder` class is central to this package, taking a mapping of ROS topics to output folders, and managing the video recording process for each topic.
 
@@ -41,38 +35,15 @@ This ROS package provides functionality for recording video streams from various
     catkin_make
     ```
    
-3Source the workspace to include the new package environment:
+3. Source the workspace to include the new package environment:
     
-        ```bash
-        source ~/catkin_ws/devel/setup.bash
-        ```
-
-## Usage
-
-1. **Initialization:** Launch the ROS node with the `VideoRecorder` class. Specify the topics and output folders in a dictionary format.
-
-Example:
-```python
-topics_to_folders = {
-    "/head_camera/rgb/image_raw": "RobotView",
-    "/rgbd_livingroom/rgb/image_raw": "FrontView",
-    "/omni_livingroom/image_raw": "OmniView"
-}
-video_recorder = VideoRecorder(topics_to_folders, debug=True)
-```
-
-1. Recording: To start recording, simply run the node. The recorder will save videos in the specified folders for each topic.
-
-2. Playing ROS Bags: To play a ROS bag and record its topics, use the play_rosbag method.
-
-Example:
-```python
-video_recorder.play_rosbag('/path/to/your/rosbag.bag')
-```
+   ```bash
+   source ~/catkin_ws/devel/setup.bash
+   ```
 
 ## Usage
 Launch the package using a ROS launch file. You can use the default settings or specify custom parameters:
 
 - To launch with default settings:
   ```bash
-  roslaunch video_recorder video_recorder.launch
+  roslaunch video_recorder VideoRecorder.launch

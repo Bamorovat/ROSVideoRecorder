@@ -114,7 +114,6 @@ class VideoRecorder:
 
                 if self.debug:
                     print(f'frame_counters[{topic}] = {self.frame_counters[topic]}')
-
                     print('Getting frame size ... ')
 
                 h, w, _ = frame.shape

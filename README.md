@@ -1,19 +1,28 @@
 # ROS Video Recorder
 
+## Author
+Mohammad Hossein Bamorovat Abadi
+
+## Date
+2024-01-11
+
 ## Overview
-This ROS package provides a tool to record video streams from specified ROS topics. It is particularly useful for recording data from multiple camera feeds in robotics applications. The package also includes functionality to play and record video from ROS bag files.
+This ROS package provides functionality for recording video streams from various ROS topics into video files. The `VideoRecorder` class is central to this package, taking a mapping of ROS topics to output folders, and managing the video recording process for each topic.
 
-## Features
-- Record video streams from multiple ROS topics.
-- Save recorded videos in specified folders.
-- Play and record video data from ROS bag files.
-- Debug mode to display live video streams and print frame details.
+## Key Features
+- Subscribes to multiple ROS topics.
+- Records video streams from these topics.
+- Supports custom output folders for each topic.
+- Optional debug mode for additional output information.
+- Ability to display live streams during recording (if enabled).
 
-## Prerequisites
-- ROS (Robot Operating System) [Noetic/other version as applicable]
-- Python 2 or Python 3
-- OpenCV
-- cv_bridge
+## Parameters
+- `topics_to_folders` (dict): A dictionary mapping ROS topics to their corresponding output folders.
+- `output_folder` (str): Specifies the path to the general output folder where the recorded videos are saved.
+- `frame_rate` (float): Sets the frame rate for the video recordings.
+- `debug` (bool): If enabled, provides additional console output for troubleshooting.
+- `show_images` (bool): If enabled, displays the live video feed during the recording process.
+
 
 ### Downloading and Building the Package
 1. **Clone the Repository:**
@@ -61,4 +70,9 @@ Example:
 video_recorder.play_rosbag('/path/to/your/rosbag.bag')
 ```
 
+## Usage
+Launch the package using a ROS launch file. You can use the default settings or specify custom parameters:
 
+- To launch with default settings:
+  ```bash
+  roslaunch video_recorder video_recorder.launch

@@ -26,7 +26,7 @@ This ROS package provides functionality for recording video streams from various
    ```
    Then, clone the repository:
    ```bash
-   git clone https://github.com/your-username/ros_video_recorder.git
+   git clone https://github.com/Bamorovat/ROSVideoRecorder.git
     ```
 2. Navigate back to your catkin workspace and build the package:
 

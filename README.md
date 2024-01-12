@@ -20,7 +20,7 @@ This ROS package provides functionality for recording video streams from various
 
 ### Downloading and Building the Package
 1. **Clone the Repository:**
-   First, navigate to your catkin workspace's `src` directory:
+   First, navigate to your catkin workspaces `src` directory:
    ```bash
    cd ~/catkin_ws/src
    ```

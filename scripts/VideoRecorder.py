@@ -88,7 +88,7 @@ class VideoRecorder:
         if self.debug:
             print(f'Video file for topic {topic}: {video_file}')
 
-        self.video_writers[topic]['writer'] = cv2.VideoWriter(video_file, cv2.VideoWriter_fourcc(*'XVID'),
+        self.video_writers[topic]['writer'] = cv2.VideoWriter(video_file, cv2.VideoWriter_fourcc(*'MJPG'),
                                                               self.frame_rate, frame_size)
 
         if self.debug:
@@ -174,7 +174,7 @@ def main():
     rosbag_path = rospy.get_param('~rosbag_path', '')
     debug = rospy.get_param('~debug', False)  # Default is False if not provided
     show_images = rospy.get_param('~show_images', False)  # Default is False if not provided
-    frame_rate = rospy.get_param('~frame_rate', 20)  # Default is 30 if not provided
+    frame_rate = rospy.get_param('~frame_rate', 20)  # Default is 20 if not provided
 
     if debug:
 

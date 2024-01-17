@@ -1,6 +1,6 @@
 <launch>
     <param name="~debug" value="false" /> <!-- Set to 'true' or 'false' -->
-    <param name="~show_images" value="true" /> <!-- Set 'true' or 'false' to show_images -->
+    <param name="~show_images" value="false" /> <!-- Set 'true' or 'false' to show_images -->
     <param name="~frame_rate" value="30.0" /> <!-- Set your desired frame rate -->
     <param name="~output_folder" value="/home/abbas/Desktop/output" />
     <param name="~rosbag_path" value="/home/abbas/Desktop/action_recording_2.bag" />
